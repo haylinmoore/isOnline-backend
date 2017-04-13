@@ -172,9 +172,9 @@ Status code 500
 ## Excluded API Pages ##
 These API pages should only be used by [the official isOnline registration page](https://scratchtools.tk/isonline/register/):
 
-- keycheck.php
-- keygen.php
-- validate.php
+- [keycheck.php](../master/src/isonline/api/v1/keycheck.php)
+- [keygen.php](../master/src/isonline/api/v1/keygen.php)
+- [validate.php](../master/src/isonline/api/v1/validate.php)
 
 Therefore, they have been excluded from the public API specification
 and are liable to change at any point without any notice provided.
