@@ -21,7 +21,6 @@ Status code 200
 - Valid is only set to true if both the username and key are correct and the user is not a bot
 - The request body will always be of the same format: no error codes will be displayed
 - A generic 404 error may occur however if the URL is invalid
-- **The condition for a user to be marked as a bot is for more than 10 requests to be sent within a 10 second period**
 
 ## Get status ##
 ```
