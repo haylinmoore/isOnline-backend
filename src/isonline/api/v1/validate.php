@@ -2,7 +2,7 @@
 require_once '../../../global.php';
 
 // Headers
-header('Access-Control-Allow-Origin: https://scratchtools.tk http://staging.scratchtools.tk');
+header('Access-Control-Allow-Origin: https://' . site_host . '/');
 header('Content-Type: application/json');
 
 // Get inputs
