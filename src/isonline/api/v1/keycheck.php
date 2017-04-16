@@ -64,7 +64,7 @@ if ($mysqli) {
                     $data[] = time();
 
                     if (count($data) <= 9) {
-                        // Array not full, so don't remvoe any items
+                        // Array not full, so don't remove any items
 
                         // Do no validation - not enough data
                     } else {
