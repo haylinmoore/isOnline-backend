@@ -20,7 +20,8 @@ $output = [
 $whitelist = [
     'online',
     'absent',
-    'dnd'
+    'dnd',
+    'editing'
 ];
 
 // Check proposed status is valid
