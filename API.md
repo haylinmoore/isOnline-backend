@@ -143,6 +143,7 @@ Status code 500
   * online
   * absent
   * dnd
+  * editing
 
 ## User Count ##
 
