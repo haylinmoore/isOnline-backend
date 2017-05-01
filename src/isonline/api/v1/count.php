@@ -22,8 +22,8 @@ try {
 if ($mysqli) {
     // Connected successfully to database
 
-    if (($result = $mysqli->query("SELECT user FROM isonline"))) {
-        $count = $result->num_rows;
+    if (($result = $mysqli->query("SELECT COUNT(*) FROM isonline"))) { 
+        $count = $result->fetch_array()['COUNT(*)'];
         http_response_code(200);
     }
     
