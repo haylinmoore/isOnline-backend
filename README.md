@@ -17,7 +17,7 @@ The server-side storage and validation code for isOnline V2.
 2. The file [DB.md] only shows the structure of tables within the Scratchtools
    database used by isOnline. This has again been done for security.
 3. isOnline has active bot detection. The condition for users to be marked as a
-   bot is to have sent more than 10 API requests per a 10 second period. If a
+   bot is to have sent more than 20 API requests per a 10 second period. If a
    user has been marked as a bot, they will have to contact
    [chooper100](https://scratch.mit.edu/users/chooper100/) in order to reset
    their account. The script used to reset accounts is part of the private
