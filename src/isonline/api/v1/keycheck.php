@@ -49,8 +49,8 @@ if ($mysqli) {
 
                     // Bot detection:
                     // In order to be marked as a bot, a user must send more than
-                    // 10 requests inside a 10 second time period
-                    // (So an average of more than 1 request per second)
+                    // 20 requests inside a 10 second time period
+                    // (So an average of more than 2 request per second)
 
                     // Get current log
                     $data = [];
@@ -63,7 +63,7 @@ if ($mysqli) {
                     // Add current timestamp to data
                     $data[] = time();
 
-                    if (count($data) <= 9) {
+                    if (count($data) <= 19) {
                         // Array not full, so don't remove any items
 
                         // Do no validation - not enough data
@@ -71,11 +71,11 @@ if ($mysqli) {
                         // Array full, so remove first item
                         $removed = array_shift($data);
 
-                        // Number of seconds between last 10 requests
+                        // Number of seconds between last 20 requests
                         $rate = $data[count($data) - 1] - $removed;
 
                         if ($rate < 10) {
-                            // Average of more than 1 request per second (over last 10 requests)
+                            // Average of more than 2 request per second (over last 20 requests)
 
                             // Mark user as bot
                             $bot = true;
