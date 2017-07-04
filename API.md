@@ -85,7 +85,7 @@ Status code 500
 ## Set status ##
 
 ```
-POST https://scratchtools.tk/isonline/api/v1/[username]/set/[status]/
+POST https://scratchtools.tk/isonline/api/v1/[username]/[key]/set/[status]/
 ```
 
 ### Parameters ###
@@ -144,6 +144,54 @@ Status code 500
   * absent
   * dnd
   * editing
+
+## Delete account ##
+
+```
+POST https://scratchtools.tk/isonline/api/v1/[username]/[key]/delete/
+```
+
+### Parameters ###
+- **Username:** the username of the user sending the request
+- **Key:** the API key of the user sending the request
+
+### Request body ###
+No request body
+
+### Standard response ###
+Status code 200
+```json
+{
+    "result":"success"
+}
+```
+
+### Incorrect API key response ###
+Status code 403
+```json
+{
+    "result":"incorrect key"
+}
+```
+
+### User not found/registered response ###
+Status code 404
+```json
+{
+    "result":"not registered"
+}
+```
+
+### Generic error response ###
+Status code 500
+```json
+{
+    "result":"error"
+}
+```
+
+### Remarks ###
+- This script will also remove users marked as a bot
 
 ## User Count ##
 
