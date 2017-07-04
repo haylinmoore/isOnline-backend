@@ -145,6 +145,62 @@ Status code 500
   * dnd
   * editing
 
+## Regenerate key ##
+
+```
+POST https://scratchtools.tk/isonline/api/v1/[username]/[key]/regenerate/
+```
+
+### Parameters ###
+- **Username:** the username of the user sending the request
+- **Key:** the API key of the user sending the request
+
+### Request body ###
+No request body
+
+### Standard response ###
+Status code 200
+```json
+{
+    "status":"success",
+    "key":"new key"
+}
+```
+
+### Incorrect API key response ###
+Status code 403
+```json
+{
+    "status":"incorrect key",
+    "key":"input key"
+}
+```
+
+### User not found/registered response ###
+Status code 404
+```json
+{
+    "status":"not registered",
+    "key":"input key"
+}
+```
+
+### Generic error response ###
+Status code 500
+```json
+{
+    "status":"error",
+    "key":"input key"
+}
+```
+
+### Remarks ###
+- The key field will either contain the value of the new key if it was generated,
+  or it will be the input key
+- This script will regenerate the keys of users marked as a bot
+- As of 04/07/2017, all keys will be a 16 digit hex number, as opposed to a
+  15 digit integer previously
+
 ## Delete account ##
 
 ```
