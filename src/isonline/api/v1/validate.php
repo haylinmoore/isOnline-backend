@@ -11,7 +11,7 @@ $code = strtolower(filter_input(INPUT_POST, 'code')); // The verification code
 $regenerate = filter_input(INPUT_POST, 'regenerate', FILTER_VALIDATE_BOOLEAN); // True to regenerate key on existing account
 
 // Load comments on verification project
-if (($html = @file_get_contents('https://scratch.mit.edu/site-api/comments/project/149841742/?page=1'))) {
+if (($html = @file_get_contents('https://scratch.mit.edu/site-api/comments/gallery/4100062/?page=1'))) {
     // HTML downloaded successfully
     
     $DOM = new DOMDocument;
